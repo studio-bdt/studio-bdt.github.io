@@ -1,0 +1,13 @@
+body {
+    background-color: white;
+    color: black;
+}
+
+body.hotdog {
+    background-color: red;
+    color: yellow;
+}
+
+#hotdoginput {
+    display: flex;
+}
