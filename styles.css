@@ -1,91 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap');
+
+/* use this for normal text */
+.mono {
+    font-family: 'DM Mono', monospace;
+}
+
+/* use ts for headings */
+.serif {
+    font-family: 'DM Serif Display', serif;
+}
+
 body {
-    background-color: black;
-    color: white;
+    background-color: #0a0a08;
 }
 
-body a {
-    color: white;
-}
-
-body.hotdog {
-    background-color: red;
-    color: yellow;
-}
-
-body.hotdog a {
-    color: yellow;
-}
-
-#top {
-    display: flex;
-}
-
-#top img {
-    filter: invert(100%);
-    width: 100px;
-}
-
-#top.hotdog img {
-    filter: invert(0%);
-}
-
-#hotdoginput {
-    position: fixed;
-    top: 20px;      
-    right: 0;
-    width: 50%;       
+nav {
+    position: sticky;
+    top: 0;
     z-index: 1000;
+    background-color: #0a0a08;
+    color: #e8e4dc;
+    display: flex;
+    border-bottom: thin solid #6b6860;
 }
 
-#hotdoginput label {
+nav a {
+    color: #6b6860;
+    border: thin solid #6b6860;
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    margin: auto 20px auto auto;
+}
+
+nav a:hover {
+    border-color: #c8f060;
+    color: #c8f060;
+    transition: background-color 0.2s;
+}
+
+nav img {
+    width: 75px;
+    filter: invert(100%);
+}
+
+.toggle {
     display: flex;
     align-items: center;
     gap: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6b6860;
+    border: thin solid #6b6860;
+    padding: 6px 12px;
+    margin: auto 20px auto auto;
+    cursor: pointer;
+    background: none;
+    user-select: none;
 }
 
-.highlight {
-    background-color: green; 
-    display: inline;
+.toggle:hover {
+    border-color: #c8f060;
+    color: #c8f060;
+    transition: background-color 0.2s;
 }
 
-.highlight.hotdog {
-    background-color: black;
+.hero {
+    padding: 50px;
+    border-bottom: thin solid #6b6860;
 }
 
-#cardholder {
+.hero h1 {
+    color: #e8e4dc;
+    font-size: 100px;
+    width: 50%;
+    margin-top: -10px;
+}
+
+.hero p {
+    color: #c8f060;
+}
+
+.hero a {
+    color: #c8f060;
+    text-decoration: none;
+}
+
+.hero h2 {
+    color: #6b6860;
+}
+
+.projects {
+    padding: 50px;
+    border-bottom: thin solid #6b6860;
+}
+
+.projects h2 {
+    color: #6b6860;
+}
+
+hr {
+    border-color: #6b6860;
+}
+
+.cardholder {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
-    border-radius: 15px;
-    text-align: center;
-    margin: 15px;
-    width: 150px;
-    background-color: white;
-    color: black;
-    padding: 10px;
+    margin: 50px;
+    border: thin solid #6b6860;
+    padding: 15px;
+    width: 30%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    background-color: #111110;
+    transition: background-color 0.2s;
+}
+
+.tag {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid #c8f060;
+    padding: 3px 8px;
+    color: #c8f060;
+    white-space: normal;
+    word-break: break-word;
+    margin-bottom: 12px;
+}
+
+.card h2 {
+    color: #e8e4dc;
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #6b6860;
+    margin-top: 0;
 }
 
 .card a {
-    color: black;
+    color: #6b6860;
 }
 
-.card.hotdog {
-    border-radius: 15px;
+.card a:hover {
+    color: #c8f060;
+    transition: background-color 0.2s;
+}
+
+.members {
+    padding: 50px;
+    border-bottom: thin solid #6b6860;
+}
+
+.memberholder {
+    display: flex;
+    justify-content: center;
+}
+
+.member {
+    padding: 15px;
+    border: thin solid #6b6860;
+    width: 300px;
     text-align: center;
-    margin: 15px;
-    width: 150px;
-    background-color: yellow;
-    color: red;
-    padding: 10px;
 }
 
-.card.hotdog a {
-    color: red;
+.member:hover {
+    background-color: #111110;
+    transition: background-color 0.2s;
 }
 
-.card.hotdog img {
-    filter: invert(100%);
+.members h2 {
+    color: #6b6860;
 }
 
+.member img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.member h2 {
+    color: #e8e4dc;
+}
+
+.member a {
+    color: #6b6860;
+    text-decoration: none;
+}
+
+.member a:hover {
+    color: #c8f060;
+    transition: background-color 0.2s;
+}
+
+.ownertag {
+    text-transform: uppercase;
+    color: #c8f060;
+}
+
+.membertag {
+    text-transform: uppercase;
+    color: #6b6860;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: thin solid #6b6860;
+}
+
+.skill {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid #6b6860;
+    padding: 3px 8px;
+    color: #6b6860;
+    font-family: 'DM Mono', monospace;
+}
+
+.skill:hover {
+    color: #c8f060;
+    border-color: #c8f060;
+    transition: background-color 0.2s;
+}
+
+footer {
+    padding: 15px;
+    color: #6b6860
+}
+
+body.hotdog {
+    background-color: #c8240c;
+}
+
+body.hotdog nav {
+    background-color: #c8240c;
+    border-color: #ff6b3d;
+}
+
+body.hotdog nav a,
+body.hotdog .toggle {
+    color: #ffe44d;
+    border-color: #ffe44d;
+}
+
+body.hotdog nav a:hover,
+body.hotdog .toggle:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+body.hotdog nav img {
+    filter: invert(90%) sepia(80%) saturate(400%) hue-rotate(340deg);
+}
+
+body.hotdog .hero {
+    border-color: #ff6b3d;
+}
+
+body.hotdog .hero h1 {
+    color: #ffe44d;
+}
+
+body.hotdog .hero p,
+body.hotdog .hero a {
+    color: #ffffff;
+}
+
+body.hotdog .hero h2 {
+    color: #ff6b3d;
+}
+
+body.hotdog .projects {
+    border-color: #ff6b3d;
+}
+
+body.hotdog .projects h2 {
+    color: #ff6b3d;
+}
+
+body.hotdog .card {
+    border-color: #ff6b3d;
+    background-color: #a81e09;
+}
+
+body.hotdog .card h2 {
+    color: #ffe44d;
+}
+
+body.hotdog .card p {
+    color: #ffb347;
+}
+
+body.hotdog .card a {
+    color: #ff6b3d
+}
+
+body.hotdog .card a:hover {
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+body.hotdog .tag {
+    color: #ffe44d;
+    border-color: #ffe44d;
+}
+
+body.hotdog .members {
+    border-color: #ff6b3d;
+}
+
+body.hotdog .members h2 {
+    color: #ff6b3d;
+}
+
+body.hotdog .member {
+    border-color: #ff6b3d;
+    background-color: #a81e09;
+}
+
+body.hotdog .member h2 {
+    color: #ffe44d;
+}
+
+body.hotdog .member a {
+    color: #ffb347;
+}
+
+body.hotdog .member a:hover {
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+body.hotdog .ownertag {
+    color: #ffe44d;
+}
+
+body.hotdog .membertag {
+    color: #ffb347;
+}
+
+body.hotdog .skills {
+    border-color: #ff6b3d;
+}
+
+body.hotdog .skill {
+    color: #ffb347;
+    border-color: #ff6b3d;
+}
+
+body.hotdog hr {
+    border-color: #ff6b3d;
+}
+
+body.hotdog footer {
+    color: #ff6b3d;
+}
+
+@media (max-width: 1024px) {
+    .card {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 10px;
+        gap: 8px;
+        align-items: center;
+    }
+
+    nav img {
+        width: 55px;
+    }
+
+    nav h1 {
+        font-size: 20px;
+        margin-right: auto;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .toggle {
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 30px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+        width: 100%;
+    }
+
+    .projects {
+        padding: 30px;
+    }
+
+    .cardholder {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 85%;
+        margin: 15px auto;
+    }
+
+    .members {
+        padding: 30px;
+    }
+
+    .memberholder {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .member {
+        width: 85%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .card h2 {
+        font-size: 36px;
+    }
+
+    nav img {
+        width: 45px;
+    }
+}
