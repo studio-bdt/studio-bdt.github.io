@@ -12,6 +12,23 @@ body.hotdog {
     color: yellow;
 }
 
+body.hotdog a {
+    color: yellow;
+}
+
+#top {
+    display: flex;
+}
+
+#top img {
+    filter: invert(100%);
+    width: 100px;
+}
+
+#top.hotdog img {
+    filter: invert(0%);
+}
+
 #hotdoginput {
     position: fixed;
     top: 20px;      
@@ -26,29 +43,49 @@ body.hotdog {
     gap: 8px;
 }
 
-.spin-text {
-    font-size: 5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #fff;
-    text-shadow: 
-        1px 1px 0px #e63946, 
-        2px 2px 0px #f77f00, 
-        3px 3px 0px #fcbf49, 
-        4px 4px 0px #a8dadc, 
-        5px 5px 0px #457b9d;
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
-    animation: spin-3d 4s infinite linear;
+.highlight {
+    background-color: green; 
+    display: inline;
 }
 
-@keyframes spin-3d {
-    0% {
-        transform: rotateY(0deg);
-    }
-    100% {
-        transform: rotateY(360deg);
-    }
+.highlight.hotdog {
+    background-color: black;
 }
 
+#cardholder {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    border-radius: 15px;
+    text-align: center;
+    margin: 15px;
+    width: 150px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+
+.card a {
+    color: black;
+}
+
+.card.hotdog {
+    border-radius: 15px;
+    text-align: center;
+    margin: 15px;
+    width: 150px;
+    background-color: yellow;
+    color: red;
+    padding: 10px;
+}
+
+.card.hotdog a {
+    color: red;
+}
+
+.card.hotdog img {
+    filter: invert(100%);
+}
 
