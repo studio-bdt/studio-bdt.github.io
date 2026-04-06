@@ -34,13 +34,42 @@ nav a {
     text-transform: uppercase;
     padding: 6px 12px;
     margin: auto 20px auto auto;
+    position: relative;
+}
+/* 
+nav a::before {
+  content: "";
+  position: absolute;
+  background: #6b6860;
+  border-color: #c8f060;
+  color: #0a0a08;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: width 0.3s ease-in-out;
+} */
+
+.border-animation {
+    transition: all 0.3s ease-in-out;
 }
 
+.border-animation:hover {
+    z-index: 1;
+    border-color: #c8f060;
+    color: #c8f060;
+}
+
+.border-animation:hover::before {
+    width: 100%;
+}
+/* 
 nav a:hover {
     border-color: #c8f060;
     color: #c8f060;
     transition: background-color 0.2s;
-}
+} */
 
 nav img {
     width: 75px;
@@ -64,11 +93,11 @@ nav img {
     user-select: none;
 }
 
-.toggle:hover {
+/* .toggle:hover {
     border-color: #c8f060;
     color: #c8f060;
     transition: background-color 0.2s;
-}
+} */
 
 .hero {
     padding: 50px;
@@ -93,6 +122,27 @@ nav img {
 
 .hero h2 {
     color: #6b6860;
+}
+
+.github {
+    text-decoration: none;
+    transition: 0.4s;
+    position: relative;
+}
+
+.github::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background-color: #c8f060;
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s;
+}
+
+.github:hover::before {
+    width: 100%;
 }
 
 .projects {
@@ -122,11 +172,72 @@ hr {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
-.card:hover {
+/* .card:hover {
     background-color: #111110;
-    transition: background-color 0.2s;
+} */
+
+.card-animation {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    z-index: 1;
+}
+
+/* change the hover  color cuz rn it looks kinda ugly */
+
+.card-animation::before,
+.card-animation::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: #1e1e19; 
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+
+.card-animation::before {
+  top: 0;
+  left: 0;
+}
+
+.card-animation::after {
+  bottom: 0;
+  right: 0;
+}
+
+.card-animation:hover::before,
+.card-animation:hover::after {
+  width: 200%;
+  height: 200%;
+  opacity: 0.6;
+  transition: all 0.4s ease-out;
+}
+
+.card-animation:hover::before {
+  top: -50%;
+  left: -50%;
+}
+
+.card-animation:hover::after {
+  bottom: -50%;
+  right: -50%;
+}
+
+.card-link {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .tag {
@@ -179,11 +290,11 @@ hr {
     border: thin solid #6b6860;
     width: 300px;
     text-align: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .member:hover {
     background-color: #111110;
-    transition: background-color 0.2s;
 }
 
 .members h2 {
@@ -202,11 +313,11 @@ hr {
 .member a {
     color: #6b6860;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .member a:hover {
     color: #c8f060;
-    transition: background-color 0.2s;
 }
 
 .ownertag {
@@ -237,12 +348,6 @@ hr {
     padding: 3px 8px;
     color: #6b6860;
     font-family: 'DM Mono', monospace;
-}
-
-.skill:hover {
-    color: #c8f060;
-    border-color: #c8f060;
-    transition: background-color 0.2s;
 }
 
 footer {
