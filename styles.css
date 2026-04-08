@@ -329,6 +329,7 @@ hr {
 .membertag {
     text-transform: uppercase;
     color: #6b6860;
+    margin-bottom: 5px;
 }
 
 .skills {
@@ -337,7 +338,6 @@ hr {
     gap: 6px;
     margin-top: auto;
     padding-top: 12px;
-    border-top: thin solid #6b6860;
 }
 
 .skill {
@@ -349,6 +349,18 @@ hr {
     padding: 3px 8px;
     color: #6b6860;
     font-family: 'DM Mono', monospace;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+hr {
+    width: 100%;
 }
 
 footer {
