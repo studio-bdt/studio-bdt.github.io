@@ -352,6 +352,12 @@ hr {
     padding: 3px 8px;
     color: #6b6860;
     font-family: 'DM Mono', monospace;
+    z-index: 2;
+}
+
+.z2 {
+    z-index: 2;
+    /* Ensures that card text is still selectable over the anchor wrapper containing the link and that hover effects display. */
 }
 
 footer {
