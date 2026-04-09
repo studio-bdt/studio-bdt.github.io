@@ -5,6 +5,10 @@
     font-family: 'DM Mono', monospace;
 }
 
+.gray {
+    color: #6b6860;
+}
+
 /* use ts for headings */
 .serif {
     font-family: 'DM Serif Display', serif;
@@ -329,7 +333,6 @@ hr {
 .membertag {
     text-transform: uppercase;
     color: #6b6860;
-    margin-bottom: 5px;
 }
 
 .skills {
@@ -349,18 +352,12 @@ hr {
     padding: 3px 8px;
     color: #6b6860;
     font-family: 'DM Mono', monospace;
+    z-index: 2;
 }
 
-.link-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-hr {
-    width: 100%;
+.z2 {
+    z-index: 2;
+    /* Ensures that card text is still selectable over the anchor wrapper containing the link and that hover effects display. */
 }
 
 footer {
