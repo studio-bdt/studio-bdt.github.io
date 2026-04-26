@@ -1,3 +1,8 @@
+4/25/26
+    Workers: ImmatureGoat   
+    things changed:
+        nothing much, just testing out github desktop on fedora
+
 12/3/25
     Workers: ImmatureGoat
     Things Changed:
